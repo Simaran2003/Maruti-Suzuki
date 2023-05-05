@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block headtitle %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "css/master.css" %}">
+    <link rel="stylesheet" href="{% static "css/datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "css/font-awesome.css" %}">
+    <link rel="stylesheet" href="{% static "css/chosen.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+
+  </head>
+  <body class="popup">
+    <nav class="navbarpopup navbar-fixed-top navbar-inverse p-1" role="navigation">
+      <div class="container-fluid p-0">
+              <span class="p-0"><i class="fa {% block logo %}{% endblock %} logo-icon text-white p-1" aria-hidden="true"></i></span>
+              <span class="logopopup"> {% block popupheader %}{% endblock %} </span> <span class="litepopup">{% block popupsubheader %}{% endblock %}</span>
+              {% block popupaction %}{% endblock %}
+    </nav>
+    <div class="container-fluid main-containt">
+      <div class="row">
+        <div class="col-md-12 popup-content">
+            {% block popupcontent %}{% endblock %}
+        </div>
+      </div>
+
+    </div>
+  </body>
+  <script src="{% static "js/jquery-3.4.1.js" %}" charset="utf-8"></script>
+  <script src="{% static "js/popper.min.js" %}" charset="utf-8"></script>
+  <script src="{% static "js/bootstrap.min.js" %}" charset="utf-8"></script>
+  <script src="{% static "js/datepicker.js" %}" charset="utf-8"></script>
+  <script src="{% static "js/chosen.jquery.js" %}" charset="utf-8"></script>
+  {% block jsblock %}
+    <script src="{% static "js/master.js" %}" charset="utf-8"></script>
+    <script type="text/javascript">
+    var config = {
+      ".chosen-select"  : {}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+    </script>
+  {% endblock %}
+
+</html>

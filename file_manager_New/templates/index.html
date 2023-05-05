@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% comment %} <link rel="stylesheet" href="style.css"> {% endcomment %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
+    {% comment %} <link rel="manifest" href="favicon_io/site.webmanifest"> {% endcomment %}
+    <meta name="theme-color" content="#ffffff">
+    <title>MARUTI SUZUKI</title>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            
+            <a href="index.html"><img src="{% static 'images/ttt.png' %}" alt="ttt"></a>
+            <div class="navlink" id="Navlinks">
+                <i class="fa fa-window-close" onclick="hidemenu()"></i>
+                <ul>
+                    <!--<li><a href="index.html">HOME</a></li>
+                    <li><a href="department.html">DEPARTMENT</a></li>
+                    <li><a href="training'23.html">TRAINING'23</a></li>
+                    <li><a href="map.html">LOCATION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <!-- <li><a href="#"><input type="text" placeholder="Search..."></a></li> -->
+
+                    <!--<script src="script.js"></script>-->
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+        
+        <div class="text">
+            <h1 class="mar"> ENGINE TESTING (EN-33) </h1>
+        </div>
+<!-- dropdown------------------------------------------------------------------------------------------------------>
+
+        <div class="m"> 
+        <ul id="menu">
+
+<!-- folder1 -->
+            <li class="parent"><a href="http://127.0.0.1:9090/Z:/maruti">Durability Testing</a>
+                <ul class="child">
+                    <li><a href="http://127.0.0.1:9090/Z:/archive">1_Models</a></li>   <!-- edit this link-->
+                    <li><a href="http://127.0.0.1:9090/Z:/">2_Failure Summaries</a></li>
+                    <li><a href="http://127.0.0.1:9090/Z:/">3_Formats & Standards</a></li>
+                    <li><a href="http://127.0.0.1:9090/Z:/">4_Test Information from SMC</a></li>
+                    <li><a href="http://127.0.0.1:9090/Z:/">5_Miscellaneous</a></li>
+                </ul>
+            </li>
+         
+<!-- folder2 -->
+            <li class="parent"><a href="http://127.0.0.1:9090/Z:/">Function Testing</a>
+                <ul class="child">
+                    <li class="parent"><a href="http://127.0.0.1:9090/Z:/">1_Test Data<span class="expand">»</span></a>
+                        <ul class="child">
+                            <li><a href="http://127.0.0.1:9090/D:/documents/" nowrap>Diesel</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/" nowrap>Engine Oil development</a></li>
+                            <li><a href="javascript:largepopup('{% url 'manager:doc_list' %}')" nowrap>F series</a></li>
+                            <li><a href="http://127.0.0.1:9090/" nowrap>G series</a></li>
+                            <li><a href="http://127.0.0.1:9090/" nowrap>K series</a></li>
+                            <li><a href="http://127.0.0.1:9090/" nowrap>M series</a></li>
+                            <li><a href="http://127.0.0.1:9090/" nowrap>Z series</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://127.0.0.1:9090/">2_Formats & Standards</a></li>
+                    <li><a href="http://127.0.0.1:9090/">3_Test Reports</a></li>
+
+                    <li><a href="http://127.0.0.1:9090/">4_Miscellaneous</a></li>
+                </ul>
+            </li>
+
+ <!-- folder3 -->
+
+           <li class="parent"><a href="http://127.0.0.1:9090/">Friction Testing</a>
+                <ul class="child">
+
+                    <li class="parent"><a href="http://127.0.0.1:9090/">1_Friction Data <span class="expand">»</span></a>
+                        <ul class="child">
+                            <li><a href="http://127.0.0.1:8000/D:/documents/ESPN/TIC">1_Test Data</a></li>
+                            <li><a href="http://127.0.0.1:9090/">2_Information</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent"><a href="http://127.0.0.1:9090/">2_VTW Test <span class="expand">»</span></a>
+                        <ul class="child">
+                            <li><a href="http://127.0.0.1:9090/">1_Test Data</a></li>
+                            <li><a href="http://127.0.0.1:9090/">2_Information</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent"><a href="http://127.0.0.1:9090/">3_Oil Pump Performance <span class="expand">»</span></a>
+                        <ul class="child">
+                            <li><a href="http://127.0.0.1:9090/">1_Test Data</a></li>
+                            <li><a href="http://127.0.0.1:9090/">2_Information</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="parent"><a href="http://127.0.0.1:9090/">4_Chain Elongation <span class="expand">»</span></a>
+                        <ul class="child">
+                            <li><a href="http://127.0.0.1:9090/">1_Test Data</a></li>
+                            <li><a href="http://127.0.0.1:9090/">2_Information</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent"><a href="http://127.0.0.1:9090/">5_Cam Thrust Wear <span class="expand">»</span></a>
+                        <ul class="child">
+                            <li><a href="http://127.0.0.1:9090/">1_Test Data</a></li>
+                            <li><a href="http://127.0.0.1:9090/">2_Information</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="http://127.0.0.1:9090/">6_Formats & Standards</a></li>
+                    <li><a href="http://127.0.0.1:9090/">7_Miscellaneous</a></li>
+                </ul>
+            </li>
+
+ <!-- folder4 -->
+
+            <li class="parent"><a href="http://127.0.0.1:9090/">ECU Dataset</a>
+                <ul class="child chil" >
+                    <li class="parent"><a href="http://127.0.0.1:9090/">1_YRA_K12C</a></li>
+                    <li><a href="http://127.0.0.1:9090/">2_YRA_K10C</a></li>
+                    <li><a href="http://127.0.0.1:9090/">3_YRA_K12M</a></li>
+                    <li><a href="http://127.0.0.1:9090/">4_YE3MC</a></li>
+                    <li><a href="http://127.0.0.1:9090/">5_YL1</a></li>
+                    <li><a href="http://127.0.0.1:9090/">6_YL8_MC</a></li>
+                    <li><a href="http://127.0.0.1:9090/">7_YRA_K14B </a></li>
+                    <li><a href="http://127.0.0.1:9090/">8_YL6</a></li>
+                    <li><a href="http://127.0.0.1:9090/">9_YL7 </a></li>
+                    <li> <a href="http://127.0.0.1:9090/">10_YL8</a> </li>
+                    <li> <a href="http://127.0.0.1:9090/"> 11_Y9T</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">12_YAD_M15A </a></li>
+                    <li> <a href="http://127.0.0.1:9090/">13_YE3_K10B</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">14_YP8_MC_14 </a></li>
+                    <li> <a href="http://127.0.0.1:9090/">15_YG8</a> </li>
+                    <li> <a href="http://127.0.0.1:9090/"> 16_YJC_K12M</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">17_YSD_NB_K12M </a></li>
+                    <li> <a href="http://127.0.0.1:9090/">18_YP8_K12M_CNG_DP</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">19_YL1_MC_PP </a></li>
+                    <li> <a href="http://127.0.0.1:9090/">20_YCA_K10B</a> </li>
+                    <li> <a href="http://127.0.0.1:9090/"> 21_YCA_K12M</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">22_YRC_K12N </a></li>
+                    <li> <a href="http://127.0.0.1:9090/">23_YHB</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">24_Y1K_K10B </a></li>
+                    <li> <a href="http://127.0.0.1:9090/">25_YG8_K12N</a> </li>
+                    <li> <a href="http://127.0.0.1:9090/">26_YSDMC_NB_HB</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">27_Y0M F8D</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">28_YNC_K10C</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">29_YSD_K12N_NB_CNG </a></li>
+                    <li> <a href="http://127.0.0.1:9090/">30_YHB MC _K15C</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">31_Important INCA Parameter List</a> </li>
+                    <li> <a href="http://127.0.0.1:9090/">32_YTA_K12N </a></li>
+                    <li> <a href="http://127.0.0.1:9090/">34_YTB K10 DITC</a> </li>
+                    <li> <a href="http://127.0.0.1:9090/">35_YWD_K15B</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">36_YCA_K12N</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">37_Z12 Unit</a></li>
+                    <li> <a href="http://127.0.0.1:9090/">38_YED Z12E_dataset </a></li>
+                    <li> <a href="http://127.0.0.1:9090/">Prof files</a> </li>
+                </ul>
+            </li>
+
+
+ <!--folder5  -->
+            <li class="parent"><a href="http://127.0.0.1:9090/">Facility</a>
+                <ul class="child">
+
+                    <li class="parent"><a href="http://127.0.0.1:9090/">1_Gurgaon <span class="expand">»</span></a>
+                        <ul class="child">
+                        <li><a href="http://127.0.0.1:9090/"> 1_AMC Plans</a></li>
+                        <li><a href="http://127.0.0.1:9090/"> 2_Upgradation</a></li>
+                        <li><a href="http://127.0.0.1:9090/">3_Budget Planning</a></li>
+                        <li><a href="http://127.0.0.1:9090/"> 4_Capital Assets</a></li>
+                        <li><a href="http://127.0.0.1:9090/">5_Miscellaneous</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent"><a href="http://127.0.0.1:9090/">2_Rohtak <span class="expand">»</span></a>
+                        <ul class="child">
+                        <li><a href="http://127.0.0.1:9090/"> 1_AMC Plans</a></li>
+                        <li><a href="http://127.0.0.1:9090/">3_Budget Planning</a></li>
+                        <li><a href="http://127.0.0.1:9090/"> 4_Capital Assets</a></li>
+                        <li><a href="http://127.0.0.1:9090/">5_Miscellaneous</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+<!-- folder6 -->
+                    <li class="parent"><a href="http://127.0.0.1:9090/">Learning</a>
+                        <ul class="child chil" >
+                           <li class="parent"><a href="http://127.0.0.1:9090/Z:/"> 1_Dept Library</a></li>
+                           <li><a href="http://127.0.0.1:9090/Z:/">2_SMC Training </a><li>
+                           <li><a href="http://127.0.0.1:9090/Z:/">3_Seminar</a><li>
+                           <li><a href="http://127.0.0.1:9090/Z:/">4_Teardown </a><li>
+                           <li><a href="http://127.0.0.1:9090/Z:/">5_Trainee Report</a> <li>
+                           <li><a href="http://127.0.0.1:9090/Z:/"> 6_Training Modules</a><li>
+                           <li><a href="http://127.0.0.1:9090/Z:/">7_Vendor Visit Documents</a><li>
+                           <li><a href="http://127.0.0.1:9090/Z:/">8_Patents & New Ideas</a><li>
+                           <li><a href="http://127.0.0.1:9090/Z:/">9_Training Data </a><li>
+                           <li><a href="http://127.0.0.1:9090/Z:/">10_Miscellaneous</a><li>
+
+                        </ul>
+                    </li>
+                       
+<!--  folder7-->
+                    <li class="parent"><a href="http://127.0.0.1:9090/Z:/">Report & Data Folder</a>
+                        <ul class="child chil" >
+                           <li class="parent"><a href="http://127.0.0.1:9090/Z:/"> 1_Database Management</a></li>
+                           <li><a href="http://127.0.0.1:9090/Z:/">2_Others </a><li>
+                           <li><a href="http://127.0.0.1:9090/Z:/">3_Monthly Report</a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 04~05 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 05~06 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 06~07 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 07~08 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 08~09 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 09~10 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 10~11 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 11~12 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 12~13 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 13~14 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 14~15 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 15~16 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 16~17 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 17~18 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 18~19 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 19~20 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 20~21 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 21~22 </a><li>
+                           <li> <a href="http://127.0.0.1:9090/Z:/">wef APRIL 22~23 </a><li>
+                           </ul>
+                        </li>
+<!-- folder8 -->
+                <li class="parent"><a href="http://127.0.0.1:9090/Z:/">Dynolab_common</a>
+                <ul class="child">
+
+                    <li class="parent"><a href="http://127.0.0.1:9090/Z:/">1_Common<span class="expand">»</span></a>
+                        <ul class="child">
+                            <li><a href="http://127.0.0.1:9090/Z:/">1_Formats & Standards</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">2_Softwares</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">3_Eway_bill</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/"> 4_RACM</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">5_NDA</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">6_JIGS & Fixtures Drawings</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/"> 7_General</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">8_Miscellaneous</a></li>
+                        </ul>
+                    </li>
+                
+                    <li class="parent"><a href="http://127.0.0.1:9090/Z:/">2_Gurgaon <span class="expand">»</span></a>
+                        <ul class="child">
+                            <li><a href="http://127.0.0.1:9090/Z:/">1_Non-Perm Manpower Attendance Record</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">2_Tool Management</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">3_Dyno_3.0</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/"> 4_ISO</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">5_Measurement Room_Gurgaon</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">6_MTD Requirement Sheet</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/"> 7_WFH_record</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">8_Miscellaneous</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="parent"><a href="http://127.0.0.1:9090/Z:/">3_Rohtak<span class="expand">»</span></a>
+                        <ul class="child">
+                            <li><a href="http://127.0.0.1:9090/Z:/"> 1_Manpower Planning</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">2_Spares & Consumables Monitoring</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/"> 3_ MTD Requirement Sheet</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">4_ISO</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">5_WFH_Record</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">6_Miscellaneous</a></li>
+                        </ul>
+            </li>
+                </ul>
+                </li>     
+<!-- folder9 -->
+
+            <li class="parent"><a href="http://127.0.0.1:9090/Z:/">SMC</a>
+                <ul class="child">
+                    <li><a href="http://127.0.0.1:9090/Z:/">1_Weekly Telecon</a></li>
+                    <li> <a href="http://127.0.0.1:9090/Z:/">2_SMC Information </a></li>
+                    </ul>
+                    </li>
+
+<!-- folder10 -->
+
+                    <li class="parent"><a href="http://127.0.0.1:9090/Z:/">Procurement</a>
+                        <ul class="child">
+                            <li><a href="http://127.0.0.1:9090/Z:/"> 1_General Info</a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">2_Others </a></li>
+                            <li><a href="http://127.0.0.1:9090/Z:/">3_Budget Planning</a></li>
+                            <li class="parent"><a href="#" style="background-color: yellow;">Ringi & PO 20xx-yy<span class="expand">»</span></a>
+                                <ul class="child">
+                                    <li><a href="Capital"> Capital</a></li>
+                                    <li><a href="Revenue">Revenue</a></li>
+                                </ul>
+                            </ul>
+                            </li>
+ <!-- folder11 -->
+        
+             <li class="parent"><a href="http://127.0.0.1:9090/Z:/">EN33 Measurement Room</a>
+                                <ul class="child">
+                                    <li><a href="http://127.0.0.1:9090/Z:/">1_General Info</a></li>
+                                    <li><a href="http://127.0.0.1:9090/Z:/">2_Equipment Details </a></li>
+                                    <li><a href="http://127.0.0.1:9090/Z:/">3_Measurement Request Tracking</a></li>
+
+                            </ul>
+                        </li>
+
+<!-- folder12 -->
+                        
+                        <li class="parent"><a href="http://127.0.0.1:9090/Z:/">Miscellaneous</a></li>
+
+                        
+                    </ul>
+
+                </div>
+          </section>
+
+
+    <!--CONTACT US
+
+    <section class="contact" id="contact">
+        <h2 class="textcontact">Contact Us</h2>
+        <form action="mailto:Abhishek.Kumar@maruti.co.in">
+            
+        <div class="form">
+            <input class="form-input" type="text" name="name" id="name" placeholder="Enter your Name">
+            <input class="form-input" type="email" name="email" id="email" placeholder="Enter your Email address">
+            <input class="form-input" type="number" name="phone" id="phone" placeholder="Enter your Phone No.">
+
+            <textarea class="form-input" name="text" id="ACTIVITIES TEXT" cols="10" rows="5"
+                placeholder="Your message..."> </textarea>
+            <br>
+            <br>
+            <button class="mainbtn drkbtn" type="submit" onclick="myFunction()" value="Submit form">Submit</button>
+        </div>
+        </form>
+    </section>
+
+    <footer>
+        <p class="footer">Copyright &copy; 2025 - All rights reserved.</p>
+    </footer>
+    
+    
+    Javascript for menu and submit
+    <script>
+        var Navlinks = document.getElementById("Navlinks")
+
+        function showmenu() {
+            Navlinks.style.right = "0";
+        }
+
+        function hidemenu() {
+            Navlinks.style.right = "-200px";
+        }
+
+        function myFunction() {
+            document.getElementById("contact").submit();
+        }
+    </script>
+    <script src="js/login.js"></script>
+
+
+</body>
+
+</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
